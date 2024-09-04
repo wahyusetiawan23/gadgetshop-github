@@ -1,0 +1,155 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "nameMitra": "Gadgetshop Purwakarta",
+      "addressMitra": "Jl. Cilengkeng Samping SMP Mutiara Insani Munjuljaya Purwakarta",
+      "numberMitra": "623195550115",
+      "mapsLink": "https://example.com/maps/purwakarta",
+      "nameStoreMitra": "GadgetshopPurwakarta"
+    },
+    {
+      "id": 2,
+      "nameMitra": "Gadgetshop Bandung",
+      "addressMitra": "Jl. Ir. H. Juanda No. 10, Bandung",
+      "numberMitra": "623205550120",
+      "mapsLink": "https://example.com/maps/bandung",
+      "nameStoreMitra": "GadgetshopBandung"
+    },
+    {
+      "id": 3,
+      "nameMitra": "Gadgetshop Jakarta",
+      "addressMitra": "Jl. Sudirman No. 45, Jakarta",
+      "numberMitra": "623215550135",
+      "mapsLink": "https://example.com/maps/jakarta",
+      "nameStoreMitra": "GadgetshopJakarta"
+    },
+    {
+      "id": 4,
+      "nameMitra": "Gadgetshop Surabaya",
+      "addressMitra": "Jl. Pahlawan No. 25, Surabaya",
+      "numberMitra": "623225550145",
+      "mapsLink": "https://example.com/maps/surabaya",
+      "nameStoreMitra": "GadgetshopSurabaya"
+    },
+    {
+      "id": 5,
+      "nameMitra": "Gadgetshop Yogyakarta",
+      "addressMitra": "Jl. Malioboro No. 7, Yogyakarta",
+      "numberMitra": "623235550155",
+      "mapsLink": "https://example.com/maps/yogyakarta",
+      "nameStoreMitra": "GadgetshopYogyakarta"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "Product": "iPhone 12 LCD Screen",
+      "Stock": 15,
+      "Price": "$150"
+    },
+    { "id": 2, "Product": "iPhone 12 Battery", "Stock": 20, "Price": "$100" },
+    {
+      "id": 3,
+      "Product": "iPhone 12 Pro Max Camera Lens",
+      "Stock": 18,
+      "Price": "$180"
+    },
+    {
+      "id": 4,
+      "Product": "iPhone 12 Pro Max Back Cover",
+      "Stock": 12,
+      "Price": "$120"
+    },
+    {
+      "id": 5,
+      "Product": "iPhone 11 LCD Screen",
+      "Stock": 25,
+      "Price": "$140"
+    },
+    { "id": 6, "Product": "iPhone 11 Battery", "Stock": 22, "Price": "$90" },
+    {
+      "id": 7,
+      "Product": "iPhone 11 Pro Camera Lens",
+      "Stock": 17,
+      "Price": "$160"
+    },
+    {
+      "id": 8,
+      "Product": "iPhone 11 Pro Back Cover",
+      "Stock": 14,
+      "Price": "$110"
+    },
+    {
+      "id": 9,
+      "Product": "iPhone XR LCD Screen",
+      "Stock": 30,
+      "Price": "$130"
+    },
+    { "id": 10, "Product": "iPhone XR Battery", "Stock": 28, "Price": "$85" },
+    {
+      "id": 11,
+      "Product": "iPhone XS Camera Lens",
+      "Stock": 19,
+      "Price": "$150"
+    },
+    {
+      "id": 12,
+      "Product": "iPhone XS Back Cover",
+      "Stock": 16,
+      "Price": "$100"
+    },
+    {
+      "id": 13,
+      "Product": "iPhone X LCD Screen",
+      "Stock": 21,
+      "Price": "$140"
+    },
+    { "id": 14, "Product": "iPhone X Battery", "Stock": 23, "Price": "$95" },
+    {
+      "id": 15,
+      "Product": "iPhone SE 2020 LCD Screen",
+      "Stock": 14,
+      "Price": "$120"
+    },
+    {
+      "id": 16,
+      "Product": "iPhone SE 2020 Battery",
+      "Stock": 19,
+      "Price": "$85"
+    },
+    {
+      "id": 17,
+      "Product": "iPhone 8 LCD Screen",
+      "Stock": 20,
+      "Price": "$130"
+    },
+    { "id": 18, "Product": "iPhone 8 Battery", "Stock": 25, "Price": "$80" },
+    {
+      "id": 19,
+      "Product": "iPhone 7 Camera Lens",
+      "Stock": 22,
+      "Price": "$140"
+    },
+    {
+      "id": 20,
+      "Product": "iPhone 7 Back Cover",
+      "Stock": 17,
+      "Price": "$110"
+    },
+    {
+      "id": 21,
+      "Product": "iPhone 6S LCD Screen",
+      "Stock": 18,
+      "Price": "$120"
+    },
+    { "id": 22, "Product": "iPhone 6S Battery", "Stock": 21, "Price": "$75" },
+    {
+      "id": 23,
+      "Product": "iPhone 6 Camera Lens",
+      "Stock": 15,
+      "Price": "$100"
+    },
+    { "id": 24, "Product": "iPhone 6 Back Cover", "Stock": 13, "Price": "$90" }
+  ]
+}

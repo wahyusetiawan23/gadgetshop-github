@@ -1,0 +1,3969 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --bg-color: #ebf9f3;
+  --color-main: #00985b;
+  --color-black: #303030;
+  --color-white: #fff;
+  --color-yellow: #c4fc38;
+  --color-red: #bf3c3c;
+  --color-secondary: #999;
+  --color-grey: #aaaaaa;
+  --color-light: #ebebeb;
+  --color-orange: #ff9c06;
+  --color-border: #ced4da;
+  --color-main-hover: #007c4e;
+}
+#app {
+  font-family: "Inter", sans-serif;
+  color: var(--color-black);
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.navbar {
+  background-color: var(--color-main);
+}
+
+.navbar .navbar-brand img {
+  width: 85px;
+}
+
+.navbar .nav-item .nav-link {
+  color: var(--color-white);
+}
+
+.navbar .nav-item .nav-link:hover {
+  color: var(--color-yellow);
+  transition: 0.5s;
+}
+
+.navbar .nav-item .nav-link.active {
+  color: var(--color-yellow);
+}
+
+.navbar-nav .input-group .form-control {
+  width: 400px !important;
+  font-size: 14px;
+}
+
+.navbar-nav .input-group .btn,
+.navbar-nav .input-group .form-control {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.navbar-nav .input-group .btn:hover {
+  color: var(--color-main);
+}
+
+.nav-whislist {
+  color: var(--color-white);
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 12px;
+  box-sizing: border-box;
+  z-index: 4;
+  background: var(--color-main);
+  color: var(--color-white);
+  box-shadow: 0px 0px 6px 2px #bebdbd;
+  overflow: hidden;
+}
+
+.bottom-bar .col .active {
+  color: var(--color-yellow);
+}
+
+.showsmall {
+  display: none;
+}
+
+.bottom-bar .col {
+  text-align: center;
+  position: relative;
+}
+
+.bottom-bar small {
+  display: block;
+}
+
+.hero {
+  background-color: var(--bg-color);
+}
+
+.hero .content {
+  background-color: var(--color-white);
+  padding: 30px 40px 30px 40px;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.hero .content .col-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .content img {
+  width: 100%;
+}
+
+.hero .content h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.hero .content h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hero .content .btn-market {
+  background-color: var(--color-main) !important;
+  color: var(--color-white) !important;
+  width: 200px;
+  padding: 10px 0px 10px 0px;
+  border-radius: 100px;
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero .content .btn {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-main);
+  color: var(--color-main);
+  width: 200px;
+  padding: 10px 0px 10px 0px;
+  border-radius: 100px;
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.hero .content .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-color);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+
+.hero .content .btn:hover,
+.hero .content .btn-market:hover {
+  color: var(--color-black) !important;
+  transition: all 0.5s;
+}
+
+.hero .content .btn:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+}
+
+.kategori .header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 15px 0px;
+  align-items: flex-end;
+}
+
+.kategori .title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.kategori .lihat-semua {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.kategori .lihat-semua:hover,
+.content-best .header a:hover {
+  background-color: var(--color-main);
+  border-radius: 10px;
+  color: var(--color-white);
+  transform: translateX(5px);
+  transition: 0.9s;
+  padding: 8px;
+  padding-left: 15px;
+}
+
+.kategori_items {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.kategori_item {
+  background: var(--color-white);
+  border: 1px solid #eaeaea;
+  width: 10%;
+  text-align: center;
+  padding: 10px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.kategori_item:hover {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: var(--color-black);
+}
+
+.kategori_item_img {
+  width: 100%;
+}
+
+.kategori_item_img img {
+  width: 70%;
+}
+
+.kategori_item_title {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.card-content .card .harga .row {
+  margin-bottom: 15px !important;
+  margin-top: 15px !important;
+}
+
+.card-content-all .row {
+  margin-top: 0px !important;
+}
+
+.card-content .row,
+.content-product .row {
+  --bs-gutter-x: 10px;
+}
+
+.card-img-top {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.card-content {
+  padding-bottom: 20px;
+}
+
+.card-content .card {
+  border-radius: 15px;
+  border-color: #151515;
+  margin-bottom: 10px;
+  background-color: var(--color-white);
+  height: 100%;
+}
+
+.card-content .card .image {
+  height: auto;
+  object-fit: contain;
+  justify-content: space-between;
+}
+
+.card-content .card .card-title {
+  font-size: 15px;
+  color: var(--color-black);
+}
+
+.card-content .card .location {
+  font-size: 14px;
+  color: var(--color-grey);
+  margin-bottom: 0px;
+}
+
+.card-content .harga {
+  margin-bottom: -10px;
+  color: var(--color-black);
+}
+
+.card-content .harga h5 {
+  margin-bottom: -10px;
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.card-content .card .rating {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 13px;
+  color: var(--color-secondary);
+  align-items: center;
+}
+
+.card-content .card .rating .fa-bag-shopping {
+  color: var(--color-red);
+}
+
+.empty-wishlist .row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.empty-wishlist img {
+  width: 100%;
+}
+
+.content-wishlist .card-content {
+  margin-top: 20px;
+}
+
+.content-wishlist .card .btn {
+  width: 100%;
+  border-radius: 5px !important;
+}
+
+.content-wishlist .btn-wishlist .row {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.card-content .card .btn-cart {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.card-content .card .btn .fa-cart-plus {
+  margin-right: 10px;
+}
+
+.content-wishlist .card .btn .fa-cart-plus {
+  margin-right: 0px;
+}
+
+.btn-success:hover {
+  background-color: var(--color-white) !important;
+  color: var(--color-main);
+  border-color: var(--color-main);
+  transition: all 0.5s;
+}
+
+.btn-danger:hover {
+  background-color: var(--color-white) !important;
+  color: var(--color-red);
+  border-color: var(--color-red);
+  transition: all 0.5s;
+}
+
+.btn-warning:hover {
+  background-color: var(--color-white) !important;
+  color: var(--color-black);
+  border-color: var(--color-orange);
+  transition: all 0.5s;
+}
+
+.ribbon {
+  margin: 0.25rem;
+  border-radius: 4px;
+  position: absolute;
+  top: 0px;
+  right: calc(-1 * 0.15rem);
+  z-index: 1;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-red);
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px 0 4px 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  min-width: 2rem;
+  cursor: pointer;
+}
+
+.card-content .card .card-title {
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  max-height: 35px;
+}
+
+.content-best .header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+.content-best .header span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.content-best .header a {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.kategori-page {
+  padding-bottom: 30px;
+}
+
+.content-invoice-topup .header-invoice-topup,
+.kategori-page h5,
+.product-page .judul-page,
+.details-page .judul-detail,
+.content-keranjang .title-cart,
+.content-page-kirim .content-kirim .title,
+.content-page-kirim .content-kurir .title,
+.content-pesanan .title,
+.content-page-akun .content-akun h5.title,
+.content-cek-pesanan .header-cek-pesanan {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.kategori-page .content-kategori {
+  margin-top: 20px;
+}
+
+.kategori-page .content-kategori img {
+  width: 70px;
+  margin: 0px 8px 5px 0px;
+}
+
+.kategori-page .content-kategori .title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.kategori-page .content-kategori .product p {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+.product-page .breadcrumb,
+.details-page .breadcrumb {
+  display: flex;
+  justify-content: center;
+  margin-top: -5px;
+  font-size: 14px;
+}
+
+.product-page .content-product .card-q {
+  background-color: var(--color-white);
+}
+
+.content-product .accordion {
+  --bs-accordion-border-radius: 0px 0px 10px 10px !important;
+  --bs-accordion-inner-border-radius: calc(0.25rem - 1px);
+  background-color: none;
+}
+
+.content-product .card-header {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--color-light);
+}
+
+.content-product .accordion-item .accordion-button {
+  font-size: 14px;
+  font-weight: 500;
+  --bs-accordion-btn-padding-y: 15px;
+  --bs-accordion-btn-padding-x: 15px;
+}
+
+.content-product .accordion-item .accordion-body {
+  padding-bottom: 0px;
+  font-size: 14px;
+}
+
+.content-product .accordion-button:not(.collapsed) {
+  color: var(--color-main);
+  background-color: var(--bg-color);
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
+    var(--bs-accordion-border-color);
+}
+
+.details-page .content-page-details {
+  background-color: var(--color-white);
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.content-page-details .big {
+  max-width: 100%;
+  height: 370px;
+}
+
+.content-page-details .thumbnail {
+  display: flex;
+  justify-content: center;
+}
+
+.content-page-details .thumbnail img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.content-page-details .thumb:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.content-page-details .thumbnail,
+.footer .contact .row {
+  --bs-gutter-x: 5px;
+}
+
+.lacak-pesanan .row,
+.content-detail-pesanan .row,
+.content-method .content-method1 .row,
+.content-akun .card-content-saldo .content-saldo .row,
+.content-keranjang .row,
+.content-akun .row,
+.content-kirim .row,
+#radio-cards-container .row,
+.btn-more-pesanan .row,
+.content-produk-pesanan .row,
+.dropship .row {
+  --bs-gutter-x: 10px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.content-page-details .active {
+  opacity: 50%;
+}
+
+.content-page-details .title {
+  font-size: 20px;
+  font-weight: 500;
+  /* margin-bottom: -10px; */
+}
+
+.content-page-details .rating {
+  display: flex;
+  gap: 40px;
+}
+
+.content-page-details .rating {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-grey);
+}
+
+.content-page-details .harga {
+  background-color: var(--bg-color);
+  margin-top: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-page-details .harga .d-harga {
+  text-decoration: var(--color-red) line-through;
+  color: var(--color-black);
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.content-page-details .harga .r-harga {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.content-page-details .disc .badge {
+  background-color: var(--color-red) !important;
+}
+
+.content-page-details .form-detail {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.form-detail .table > :not(caption) > * > * {
+  padding: 0.2rem 0.5rem;
+}
+
+.form-detail .d-flex {
+  align-items: center;
+}
+
+.content-page-details .form-detail .form-control,
+.content-page-details .form-detail .form-select {
+  font-size: 14px;
+}
+
+.content-page-details .form-detail .stok-detail {
+  font-size: 12px;
+  color: var(--color-grey);
+}
+
+.btn-group input {
+  text-align: center;
+  padding: 0px 15px 0px 15px;
+}
+
+.btn-group .btn-sm {
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+}
+
+.content-page-details .btn-group {
+  margin-right: 10px;
+}
+
+.content-page-details .btn-details .btn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.content-page-details .btn-details .btn-success:hover {
+  background-color: var(--color-white);
+  color: var(--color-main);
+  transition: all 0.5s;
+}
+
+.content-page-details .share span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.content-page-details .share .medsos img {
+  width: 38px;
+  height: 38px;
+  margin-right: 3px;
+  margin-top: 5px;
+}
+
+.details-page .content-desc-details {
+  background-color: var(--color-white);
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.details-page .content-desc-details .bg-desc-details,
+.details-page .content-nilai-details .bg-nilai-details {
+  background-color: var(--bg-color);
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.details-page .content-desc-details .content {
+  font-size: 14px;
+  margin: 10px 0px 10px 10px;
+  display: -webkit-box !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  word-break: break-word !important;
+}
+
+.detail-show {
+  color: var(--color-main);
+  font-weight: 500;
+}
+
+.fa-star {
+  color: var(--color-orange);
+}
+
+.content-nilai-details .content .card-testi {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.content-nilai-details .content .card-testi .header-testi {
+  font-size: 13px;
+  color: var(--color-grey);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.content-nilai-details .content .card-testi .img-nama {
+  display: flex;
+  align-items: center;
+}
+
+.content-nilai-details .content .card-testi .img-nama img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+.content-nilai-details .content .card-testi .img-nama span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.content-nilai-details .content .card-testi .desc-testi {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.owl-theme .owl-nav {
+  display: none;
+}
+
+.content-more-product {
+  background-color: var(--color-white);
+}
+
+.content-more-product .title-more {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.content-more-product {
+  margin-top: 20px;
+}
+
+.content-login .row,
+.content-cek-pesanan .row {
+  display: flex;
+  justify-content: center;
+}
+
+.content-cek-pesanan .card-cek-pesanan {
+  background-color: var(--color-white);
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.content-login .card-login {
+  background-color: var(--color-white);
+  padding: 15px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.content-login .card-login .title-login {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content-login .card-login .desc-login {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.content-login .card-login .input-form {
+  margin-top: 20px;
+}
+
+.content-login .card-login .input-form .form-label {
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.content-login .card-login .form-control {
+  font-size: 14px;
+  border-color: var(--color-grey);
+}
+
+.content-login .card-login .btn-login .btn {
+  margin-top: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+  margin-bottom: 20px;
+}
+
+.btn-forget .btn {
+  margin-top: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+  margin-bottom: 20px;
+}
+
+.content-login .card-login .btn-login .btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-main);
+  transition: all 0.5s;
+}
+
+.content-login .card-login .line-login {
+  color: var(--color-grey);
+  border-top: 2px solid var(--color-grey);
+  position: relative;
+}
+
+.content-login .card-login .line-login span {
+  display: inline-block;
+  margin-left: auto;
+  padding: 0 12px;
+  background-color: var(--color-white);
+}
+
+.content-login .card-login .line-login .text-login {
+  position: absolute;
+  top: -12px;
+  text-align: center;
+  width: 100%;
+}
+
+.content-login .card-login .btn-login-google {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.content-login .card-login .btn-login-google .btn {
+  background-color: var(--bg-color);
+  border-color: var(--color-main);
+  color: var(--color-main);
+}
+
+.content-login .card-login .btn-login-google .btn:hover {
+  background-color: #00492c;
+  color: var(--color-white);
+  transition: all 0.5s;
+}
+
+.content-login .card-login .btn-login-google img {
+  width: 30px;
+}
+
+.content-login .card-login .cta-login {
+  text-align: center;
+}
+
+.content-login .card-login .cta-login span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.content-login .card-login .cta-login a {
+  color: var(--color-main);
+}
+
+.content-keranjang .content-page-keranjang {
+  margin-top: 30px;
+}
+
+.content-keranjang .header-keranjang {
+  background-color: var(--color-white);
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-keranjang .header-keranjang span {
+  font-size: 15px;
+}
+
+.content-keranjang .header-keranjang .btn {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.content-keranjang .header-keranjang .fa-trash-can {
+  margin-right: 8px;
+}
+
+.content-keranjang .total-belanja {
+  background-color: var(--color-white);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  position: sticky;
+  top: 80px;
+  z-index: 2;
+}
+
+.content-keranjang .list-keranjang {
+  background-color: var(--color-white);
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.content-keranjang .list-keranjang .item-cart {
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--color-light);
+}
+
+.content-keranjang .list-keranjang img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.content-keranjang .list-keranjang .title-send {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.content-keranjang .list-keranjang .list-item-cart .harga {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.list-item-cart p,
+.ss p {
+  margin-bottom: 0px;
+}
+
+.list-item-cart .namaProduk {
+  font-weight: 700;
+}
+
+.list-item-cart .pcs {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.list-item-cart .note {
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+.btn-danger {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.content-keranjang .total-belanja .total-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-keranjang .total-belanja .total-price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.content-keranjang .total-belanja .btn {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.content-kirim .bg-detail-pesanan {
+  background-color: var(--color-white);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.abc {
+  margin-top: 10px !important;
+}
+
+.content-kirim .bg-detail-shop {
+  background-color: var(--color-white);
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.content-kirim .bg-alamat,
+.content-kirim .bg-alamat-kirim,
+.content-kirim .bg-informasi,
+.content-kurir .bg-kurir,
+.content-page-akun .content-akun .card-profil,
+.content-page-akun .content-akun .card-content-saldo,
+.content-page-akun .content-akun .card-content-profil,
+.content-page-akun .content-akun .card-content-alamat,
+.content-page-akun .content-akun .card-content-rek {
+  background-color: var(--color-white);
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.lacak-pesanan .card-tracking,
+.lacak-pesanan .card-info-lacak,
+.content-kirim .bg-voucher,
+.bg-method {
+  background-color: var(--color-white);
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.content-kirim .bg-voucher .header,
+.content-kirim .bg-detail-shop .header {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.content-kirim .bg-alamat .header,
+.content-kirim .bg-method .header,
+.content-kirim .bg-alamat-kirim .header,
+.content-kirim .bg-detail-pesanan .header,
+.content-kirim .bg-informasi .header,
+.content-kurir .bg-kurir .judul-kirim {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.content-kirim .bg-alamat .content-data-alamat {
+  background-color: var(--bg-color);
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.content-data-alamat .bg-cek-alamat {
+  background-color: var(--color-white);
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-data-alamat .bg-cek-alamat .edit-alamat {
+  font-size: 16px;
+  color: var(--color-red);
+  font-weight: 500;
+  margin-right: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.bg-cek-alamat .form-check .name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.content-page-akun .content-akun .card-profil {
+  text-align: center;
+}
+
+.content-page-akun .content-akun .card-profil img {
+  /* width: 90px; */
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  /* border-radius: 100px; */
+}
+
+.content-page-akun .content-akun .card-profil p {
+  font-size: 18px;
+  margin-bottom: 0px;
+  font-weight: 500;
+}
+
+.content-page-akun .content-akun .card-profil .badge {
+  background-color: var(--bg-color) !important;
+  color: var(--color-main) !important;
+}
+
+.content-akun .card-menu-akun {
+  background-color: var(--color-white);
+  border-radius: 5px;
+  padding: 15px;
+  padding-bottom: 1px;
+  margin-top: 10px;
+}
+
+.card-categori {
+  background-color: var(--color-white);
+  border-radius: 5px;
+  padding: 15px;
+  padding-bottom: 1px;
+  border: 1px solid var(--color-border);
+}
+
+.content-akun .card-menu-akun .item-menu a,
+.card-categori .item-menu a {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-categori .item-menu {
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 10px;
+}
+
+.content-akun .card-menu-akun .item-menu .active,
+.card-categori .item-menu .active {
+  color: var(--color-main);
+}
+
+.content-akun .card-menu-akun .item-menu .icon,
+.card-categori .item-menu .icon {
+  margin-right: 10px !important;
+}
+
+.content-akun .card-content-saldo .header-saldo,
+.content-akun .card-content-alamat .header-alamat,
+.content-akun .card-content-rek .header-rek {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-light);
+}
+
+.content-akun .card-content-saldo .header-saldo .title-header,
+.content-akun .card-content-alamat .header-alamat,
+.content-akun .card-content-rek .header-rek {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-outline-success {
+  background-color: var(--bg-color);
+  border-color: var(--color-main);
+  color: var(--color-main);
+}
+
+.btn-success {
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+}
+
+.content-akun .card-content-saldo .content-saldo {
+  margin-top: 20px;
+}
+
+.content-akun .card-content-saldo .content-saldo .card-saldo {
+  background-color: var(--bg-color);
+  border: 1px solid var(--color-grey);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.content-akun .card-content-saldo .content-saldo .card-saldo .col-md-2 {
+  display: flex;
+  align-items: center;
+}
+
+.content-akun .card-content-saldo .content-saldo .card-saldo p {
+  margin-bottom: 0px !important;
+}
+
+.content-akun .card-content-saldo .content-saldo .card-saldo .title-saldo {
+  font-size: 14px;
+}
+
+.content-akun .card-content-saldo .content-saldo .card-saldo .total-saldo {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.content-page-akun .content-akun .card-riwayat-saldo,
+.content-page-akun .content-akun .card-transaksi-saldo {
+  background-color: var(--color-white);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.content-page-akun .content-akun .card-list-menu-akun {
+  background-color: var(--color-white);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 30px;
+  display: none;
+}
+
+.content-akun .card-riwayat-saldo .header-riwayat,
+.content-akun .card-transaksi-saldo .header-transaksi,
+.content-akun .card-content-profil .header-profil {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-light);
+}
+
+.content-akun .card-transaksi-saldo .content-transaksi-saldo {
+  text-align: center;
+  color: var(--color-grey);
+  margin-top: 10px;
+}
+
+.content-akun .card-content-profil .content-profil,
+.card-content-alamat .content-alamat,
+.card-content-rek .content-rek,
+.content-akun .card-riwayat-saldo .content-riwayat-saldo {
+  margin-top: 15px;
+}
+
+.content-akun .card-content-profil .content-profil span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.content-riwayat-saldo .fa-money-bill-1,
+.content-riwayat-saldo .fa-circle-xmark,
+.card-content-alamat .fa-circle-plus,
+.card-content-rek .fa-circle-plus {
+  margin-right: 5px;
+}
+
+.content-profil .btn-profil {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content-alamat .content,
+.content-rek {
+  border-bottom: 1px solid var(--color-light);
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.content-alamat .title p {
+  margin-bottom: 0px;
+}
+
+.content-alamat .title .nama,
+.nama_alamat {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.content-alamat .title .contact {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.content-alamat .alamat {
+  font-size: 15px;
+}
+
+.content-alamat .content-btn-alamat,
+.content-rek .content-btn-rek {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.btn-warning {
+  background-color: var(--color-orange);
+  border-color: var(--color-orange);
+  font-weight: 500;
+}
+
+.content-rek .col-rek .data .bank {
+  font-weight: 500;
+  color: var(--color-black);
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.content-rek .col-rek .data span {
+  font-size: 14px;
+  color: var(--color-grey);
+  margin-right: 10px;
+}
+
+.content-pesanan .content-list-menu-pesanan .form-select,
+.card-list-menu-akun .form-select {
+  border-color: var(--color-grey);
+}
+
+.content-wishlist .title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content-wishlist .card-content .card .card-body .table {
+  font-size: 14px;
+}
+
+.bg-alamat .header-alamat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.bg-alamat .content {
+  border-bottom: 1px solid var(--color-light);
+  padding-bottom: 15px;
+}
+
+.bg-alamat .dropship {
+  margin-top: 15px;
+}
+
+.dropship .form-check {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.bg-cek-alamat .form-check p {
+  margin-bottom: 0px;
+}
+
+.content-kirim .btn-next,
+.content-kurir .btn-next {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-next .btn {
+  background-color: var(--color-white);
+  padding: 6px 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-next .btn .fa-chevron-right {
+  margin-left: 10px;
+}
+
+.radio-card {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.radio-card:hover {
+  border: 2px solid var(--color-main);
+  cursor: pointer;
+}
+
+.radio-card-check {
+  display: none;
+  color: var(--color-main);
+}
+
+.radio-card-check i {
+  font-size: 1.6rem;
+  color: #016787;
+}
+
+.radio-card-icon img {
+  width: 80px;
+}
+
+.radio-card-label {
+  margin-top: 10px;
+  border-bottom: 1px solid var(--color-light);
+  padding-bottom: 10px;
+}
+
+.radio-card-label p {
+  margin-bottom: 0px;
+}
+
+.radio-card-label .title-label {
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+.radio-card-label .desc-label {
+  font-size: 12px;
+}
+
+.radio-card-label-price {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.radio-card.selected {
+  border: 1px solid var(--color-main);
+  background-color: var(--bg-color);
+}
+
+.radio-card.selected .radio-card-check {
+  display: inline-flex;
+}
+
+.bg-informasi table > :not(caption) > * > *,
+.info-kirim-kemas table > :not(caption) > * > * {
+  padding: 15px 0px 0px 0px;
+}
+
+.bg-informasi table {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.input-group-text {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.bg-informasi table p {
+  margin-bottom: 0px;
+}
+
+.bg-voucher .input-group {
+  margin-top: 8px;
+}
+
+.bg-voucher .input-group .form-control {
+  font-size: 14px;
+  padding: 8px 10px;
+}
+
+.bg-voucher .input-group .btn {
+  font-size: 14px;
+  background-color: var(--color-main);
+}
+
+.bg-detail-shop .detail-total {
+  margin-top: 10px;
+  border-bottom: 1px solid var(--color-grey);
+  padding-bottom: 10px;
+}
+
+.bg-detail-shop .total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 1px;
+}
+
+.bg-detail-shop .total .harga {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.bg-detail-shop .total.sub {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.bg-detail-shop .btn-detail-bayar {
+  margin-top: 10px;
+}
+
+.bg-detail-shop .btn-detail-bayar .btn-outline-success {
+  background-color: var(--bg-color);
+}
+
+.bg-detail-shop .btn-detail-bayar .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-outline-success:hover {
+  background-color: var(--color-main) !important;
+  color: var(--color-white) !important;
+}
+
+.bg-alamat-kirim .header,
+.bg-detail-pesanan .header {
+  border-bottom: 1px solid var(--color-grey);
+  padding-bottom: 10px;
+}
+
+.bg-alamat-kirim .content {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.bg-alamat-kirim .content p,
+.bg-detail-pesanan .content p {
+  margin-bottom: 2px;
+  font-size: 15px;
+}
+
+.bg-alamat-kirim .content .name,
+.bg-detail-pesanan .content .name {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.bg-detail-pesanan .content {
+  margin-top: 15px;
+}
+
+.bg-detail-pesanan .content img {
+  width: 100%;
+}
+
+.bg-detail-pesanan .content .title-produk,
+.bg-detail-pesanan .content .total-harga {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.bg-method .total-bayar {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-grey);
+  padding-bottom: 10px;
+}
+
+.bg-method .total-bayar .price {
+  font-size: 18px;
+  color: var(--color-main);
+  font-weight: 500;
+}
+
+.bg-method .header-bayar {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.bg-method .button-method {
+  margin-top: 10px;
+}
+
+.bg-method .button-method .btn {
+  margin-bottom: 5px;
+}
+
+.btn-method1 {
+  margin-top: 8px;
+  display: none;
+}
+
+.btn-method1 .btn {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.btn-method .btn {
+  margin-bottom: 5px;
+}
+
+.content-pesanan,
+.content-page-kirim,
+.content-cek-pesanan,
+.content-page-akun {
+  margin-bottom: 30px;
+}
+
+.content-pesanan .content-list-menu-pesanan {
+  background-color: var(--color-white);
+  padding: 15px;
+  display: none;
+  border-radius: 5px;
+}
+
+.content-pesanan .content-btn-pesanan {
+  margin-top: 40px;
+}
+
+.content-btn-pesanan .btn-success {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.content-btn-pesanan .btn-success.active {
+  background-color: var(--color-main);
+  color: var(--color-white);
+}
+
+.content-btn-pesanan .btn-success.active:hover {
+  background-color: var(--color-main) !important;
+  color: var(--color-white);
+}
+
+.content-btn-pesanan .btn-success:hover {
+  color: var(--color-main);
+  background-color: var(--color-white) !important;
+}
+
+.content-header-pesanan {
+  background-color: var(--color-light);
+  border-top: 1px solid var(--color-grey);
+  border-bottom: 1px solid var(--color-grey);
+  margin-top: 15px;
+  padding: 10px 20px 10px 20px;
+}
+
+.content-header-pesanan .title-pesanan {
+  font-size: 14px;
+}
+
+.content-header-pesanan .angka {
+  font-size: 18px;
+}
+
+.content-header-pesanan p,
+.content-produk-pesanan .produk p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.content-pesanan .bg-produk-pesanan {
+  background-color: var(--color-white);
+  padding: 15px;
+}
+
+.bg-produk-pesanan .content-produk-pesanan {
+  background-color: var(--bg-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.content-produk-pesanan .list-pesanan img {
+  width: 60px;
+}
+
+.list-pesanan .price-qty,
+.list-pesanan .price {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.content-produk-pesanan .list-pesanan {
+  border-bottom: 1px solid var(--color-grey);
+  padding-bottom: 10px;
+}
+
+.content-produk-pesanan .ongkir {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.total-pesanan .bg-total-pesanan {
+  background-color: var(--bg-color);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.bg-produk-pesanan .total-pesanan {
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.total-pesanan .info-pesanan {
+  font-size: 14px;
+  color: #ff0000;
+}
+
+.info-pesanan p {
+  margin-bottom: 0px !important;
+}
+
+.bg-total-pesanan {
+  font-size: 14px;
+}
+
+.bg-total-pesanan .total-harga {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.bg-produk-pesanan .btn-total-bayar .btn {
+  margin-top: 15px;
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+}
+
+.batal {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+.btn-more-pesanan .row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.bg-header-pesan {
+  background: var(--color-black);
+  padding: 15px;
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-header-pesanan .text-end {
+  align-self: center;
+}
+
+.ongkir .tot-harga {
+  font-size: 18px;
+  color: var(--color-main);
+}
+
+.kemas .price {
+  font-weight: 500 !important;
+}
+
+.header-detail-pesanan {
+  background-color: var(--color-light);
+  margin-top: 40px;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.header-detail-pesanan .title-header {
+  font-size: 18px;
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.header-detail-pesanan .title-id-pesanan {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.list-content-pesanan .content-details-pesanan .text .header-text {
+  font-size: 18px;
+}
+
+.list-content-pesanan .content-details-pesanan p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.list-content-pesanan .content-details,
+.list-content-pesanan .content-details-pesanan {
+  background-color: var(--color-main);
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 3px;
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.list-content-pesanan .detail-totals,
+.list-content-pesanan .info-kirim-kemas,
+.list-content-pesanan .kemas-method,
+.list-content-pesanan .produk-detail {
+  background-color: var(--color-white);
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.info-kirim-kemas .header {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.info-kirim-kemas table p {
+  margin-bottom: 0px;
+}
+
+.kemas-method .header {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.kemas-method p {
+  margin-top: 5px;
+  border-bottom: 1px solid var(--color-grey);
+  padding-bottom: 10px;
+  color: var(--color-main);
+}
+
+.kemas-method .kode {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.kemas-method .name {
+  font-weight: 700;
+}
+
+.list-content-pesanan .produk-detail img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.list-content-pesanan .content-produk-detail {
+  display: flex;
+}
+
+.list-content-pesanan .produk-detail .header,
+.list-content-pesanan .detail-totals .header {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.list-content-pesanan .produk-detail p {
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.list-content-pesanan .produk-detail .harga {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.list-content-pesanan .detail-totals .subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.list-content-pesanan .detail-totals .line {
+  border-bottom: 1px solid var(--color-grey);
+  padding-bottom: 10px;
+}
+
+.detail-totals .total-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.content-detail-pesanan .btn-back-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.list-content-pesanan .top {
+  display: none;
+}
+
+.list-content-pesanan .bottom a {
+  color: var(--color-yellow);
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.modal-title,
+.modal-title {
+  font-size: 18px !important;
+}
+
+.modal-header {
+  padding: 10px 16px;
+}
+
+.modal-alamat .modal-body .form-label,
+.modal-akun .modal-body .form-label {
+  font-size: 14px;
+  margin-bottom: 0.2rem;
+  justify-content: space-between;
+}
+
+.form-label .lupa,
+.btn-modal-alamat .lupa {
+  color: var(--color-red);
+}
+
+.modal-alamat .modal-body,
+.modal-akun.modal-body {
+  padding: 10px 20px 20px 20px;
+}
+
+.modal-alamat .modal-body .form-control,
+.modal-alamat .modal-body .form-control,
+.modal-akun .modal-body .form-select,
+.modal-akun.modal-body .form-select {
+  font-size: 14px;
+}
+
+.modal-alamat .modal-body .form-check-input:checked {
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+}
+
+.modal-alamat .modal-body .checkbox:checked + span {
+  color: var(--color-main);
+}
+
+.modal-alamat .modal-body .form-check,
+.modal-akun .modal-body .form-check {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.modal-footer {
+  padding: 10px 16px !important;
+  border-top: unset;
+}
+
+.modal-alamat .btn-modal-alamat .btn,
+.modal-akun .btn-modal-rek .btn,
+.modal-akun .btn-modal-tarik .btn,
+.modal-akun .btn-modal-top .btn {
+  width: 100%;
+  margin-top: 8px;
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+}
+
+.btn-modal-password .btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.modal-akun .option-topUp {
+  --bs-gutter-x: 10px;
+  margin-top: 20px;
+}
+
+.modal-akun .option-topUp .btn {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: var(--color-white);
+  color: var(--color-main);
+  border-color: var(--color-main);
+}
+
+.category-option,
+.xx {
+  position: sticky;
+  top: 80px;
+  z-index: 2;
+}
+
+.category-option .select-kategori {
+  background-color: var(--color-white);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-border);
+  font-size: 16px;
+  color: var(--color-black);
+}
+
+.category-option .header-category {
+  padding: 10px !important;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  text-align: center;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.category-option .btn-back-category {
+  display: none;
+  color: var(--color-white);
+}
+
+.category-option .category-name .accordion-item {
+  border: 1px solid var(--color-border);
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+.category-option .category-name .accordion-item .accordion-header {
+  background-color: #eff2f7 !important;
+}
+
+.category-option .category-name .accordion-button {
+  color: var(--color-black);
+  border: none;
+  margin: 0;
+  font-weight: bold;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #eff2f7;
+}
+
+.category-option
+  .category-name
+  .accordion-item
+  .accordion-collapse
+  .accordion-body {
+  padding: 8px 10px 0px 10px;
+}
+
+.category-scroll {
+  max-height: 250px;
+  /* overflow: auto; */
+}
+
+.category-option ul {
+  padding-left: 0.5rem !important;
+  margin-bottom: -4px;
+}
+
+.category-option
+  .category-name
+  .accordion-item
+  .accordion-collapse
+  .accordion-body
+  .category-list {
+  overflow: hidden;
+}
+
+.category-option
+  .category-name
+  .accordion-item
+  .accordion-collapse
+  .accordion-body
+  .category-list
+  li {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.danger-button {
+  background-color: var(--color-red);
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 12px !important;
+  color: var(--color-white) !important;
+  font-weight: 400;
+}
+
+.danger-button:hover {
+  background-color: var(--color-red);
+}
+
+.filter-button,
+.select-kategori-show {
+  display: none;
+}
+
+.ongkir p {
+  margin-bottom: 0px;
+}
+
+.ongkir .warning {
+  color: var(--color-red);
+}
+
+.btn-detail-bayar .card-saldo-pay {
+  background-color: var(--color-white);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 15px 10px 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.btn-detail-bayar .card-saldo-pay .title-pay {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.card-saldo-pay .title-saldo {
+  color: var(--color-main);
+}
+
+.btn-detail-bayar .card-saldo-pay .current-saldo {
+  font-size: 14px;
+}
+
+.content-invoice-topup .bg-method {
+  margin-bottom: 30px;
+}
+
+.content-invoice-topup .bg-method .header {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.content-invoice-topup .bg-method .total-bayar {
+  margin-top: 5px;
+}
+
+.voucher-item {
+  border-radius: 8px;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  background: #348f50;
+  background: -webkit-linear-gradient(to right, #56b4d3, #348f50);
+  background: linear-gradient(to right, #56b4d3, #348f50);
+  color: var(--color-white);
+  margin-top: 15px;
+}
+
+.voucher-item .fa-ellipsis-vertical {
+  color: var(--color-white);
+  font-size: 70px;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  left: -10px;
+}
+
+.voucher-item .title-disc {
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: -10px;
+  margin-top: 10px;
+}
+
+.voucher-item .jumlah-disc {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.voucher-item .line {
+  position: absolute;
+  right: 65%;
+  height: 400px;
+  background-color: #f2f3f8;
+  width: 6px;
+  top: -100px;
+}
+
+.voucher-item .nama-disc {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.voucher-item .min-disc {
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+.btn-detail-bayar .card-saldo-pay:hover {
+  border: 1px solid var(--color-main);
+  transition: all 0.5s;
+}
+
+.btn-load-more {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.lacak-pesanan {
+  margin-bottom: 30px;
+}
+
+.card-info-lacak .header-info,
+.card-tracking .header-track {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.lacak-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.lacak-info .lacak-title {
+  font-size: 16px;
+  color: var(--color-grey);
+}
+
+.lacak-info .lacak-noResi {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.lacak-info .lacak-desc {
+  font-size: 16px;
+}
+
+.card-info-lacak .alert {
+  padding: 8px 15px;
+  display: none;
+  background-color: var(--bg-color);
+  color: var(--color-main);
+  border-color: var(--color-main);
+}
+
+.card-tracking .content-track {
+  border-top: 1px solid var(--color-light);
+  padding-top: 15px;
+}
+
+.btn-group .form-control.quantity {
+  background: unset;
+  border: unset;
+  width: 60px;
+  text-align: center;
+}
+
+.order-track {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-track-step {
+  display: flex;
+  height: 5rem;
+}
+
+.order-track-step:last-child {
+  overflow: hidden;
+  height: 4rem;
+}
+
+.order-track-step:last-child .order-track-status span:last-of-type {
+  display: none;
+}
+
+.order-track-status {
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+.order-track-status-dot {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--color-main);
+}
+
+.order-track-status-line {
+  display: block;
+  margin: 0 auto;
+  width: 2px;
+  height: 5rem;
+  background: var(--color-main);
+}
+
+.order-track-text-stat {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: -2px;
+}
+
+.order-track-text-sub {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.order-track {
+  transition: all 0.3s height 0.3s;
+  transform-origin: top center;
+}
+
+.btn-pesanan-nilai .btn {
+  padding: 5px 30px;
+}
+
+.card-content .image {
+  cursor: pointer;
+}
+
+.fullsize-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  overflow: auto;
+  display: none;
+  transition: all 0.3s ease-out;
+}
+
+.fullsize-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 40%;
+  max-height: 40%;
+  transition: all 0.3s ease-out;
+}
+
+.fullsize-image .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 60px;
+  right: 40px;
+  background-color: #25d366;
+  color: var(--color-white);
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3pxvar (--color-secondary);
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+.modal-nilai .modal-body img {
+  width: 50px;
+  padding-right: 5px;
+}
+
+.modal-nilai .modal-body {
+  padding-bottom: 0px;
+}
+
+.modal-nilai .modal-body .product-modal {
+  display: flex;
+  font-size: 14px;
+  border-bottom: 1px solid var(--color-light);
+  padding-bottom: 10px;
+}
+
+.modal-nilai .nilai-modal {
+  margin-top: 10px;
+}
+
+.modal-nilai .form-control {
+  font-size: 14px;
+}
+
+.rating-nilai {
+  margin-top: 10px;
+  top: 50%;
+  left: 50%;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+}
+
+.rating-nilai input {
+  display: none;
+}
+
+.rating-nilai label {
+  display: block;
+  cursor: pointer;
+  width: 30px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.rating-nilai label:before {
+  content: "\f005";
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 30px;
+  color: #101010;
+}
+
+.rating-nilai label:after {
+  content: "\f005";
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 30px;
+  color: var(--color-white) a00;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.rating-nilai label:hover:after,
+.rating-nilai label:hover ~ label:after,
+.rating-nilai input:checked ~ label:after {
+  opacity: 1;
+}
+
+table.table {
+  font-size: 15px;
+}
+
+div.dataTables_wrapper div.dataTables_length,
+div.dataTables_wrapper div.dataTables_filter,
+div.dataTables_wrapper div.dataTables_info,
+div.dataTables_wrapper div.dataTables_paginate {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+  padding-top: 0em;
+}
+
+.pagination {
+  --bs-pagination-font-size: 14px;
+  --bs-pagination-active-bg: var(--color-main);
+  --bs-pagination-active-border-color: var(--color-main);
+  --bs-pagination-color: var(--color-main);
+}
+
+#counter {
+  width: 40px;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-group-sm {
+  border: 1px solid var(--color-main);
+}
+
+.footer {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-light);
+  padding-bottom: 20px;
+}
+
+.footer .content-footer {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-light);
+}
+
+.footer .logo img {
+  width: 80px;
+}
+
+.footer .content-footer .contact {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer .contact .col-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .contact .row {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.footer .information .title-info,
+.footer .pembayaran .title-bayar {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer .information .content-info {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer .information .content-info p {
+  margin-bottom: 8px;
+}
+
+.footer .pembayaran .content-bayar img {
+  width: 70px;
+  margin-bottom: 7px;
+  margin-right: 5px;
+}
+
+.footer .cta .img {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer .cta img {
+  width: 28px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.footer .cta .cr {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+a:hover {
+  color: var(--color-main);
+  transition: 0.5s;
+}
+
+.navbar-toggler {
+  border: unset;
+  color: var(--color-white);
+}
+
+.navbar-show {
+  display: none;
+}
+
+.col-kategori {
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.row-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) !important;
+  grid-gap: 10px;
+}
+
+.row-containerr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.row-containerss {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) !important;
+  grid-gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .row-container,
+  .row-containerr {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .row-container,
+  .row-containerss {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .searchbar {
+    width: 60% !important;
+  }
+
+  .footerCard {
+    display: inline-block !important;
+  }
+
+  .footerCard .btnMitra {
+    margin-top: 0.4rem;
+  }
+
+  .not-found .col-md-6 {
+    width: 51% !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .empty-wishlist img {
+    width: 50%;
+  }
+
+  .empty-wishlist .col-md-3 {
+    text-align: center;
+  }
+
+  .btn-more-view {
+    justify-content: center !important;
+    margin-bottom: 15px;
+  }
+
+  .bg-total-pesanan {
+    margin-bottom: 10px;
+  }
+
+  .row-container,
+  .row-containerr,
+  .row-containers,
+  .row-containerss {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .kategori_item {
+    width: 20%;
+  }
+
+  .showsmall {
+    display: block;
+  }
+
+  .btn-block .input-group > .form-control,
+  .btn-block .input-group > .form-floating,
+  .btn-block .input-group > .form-select {
+    position: relative;
+    flex: 1 1 auto;
+    width: 310px;
+    min-width: 0;
+    margin-top: 8px;
+    border-color: var(--color-white);
+  }
+
+  .btn-block
+    .input-group
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+      .valid-feedback
+    ):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 8px;
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+  }
+
+  .btn-block .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #navbarSupportedContent1 .nav-link {
+    margin-left: 10px;
+  }
+
+  .navbar-hide {
+    display: none;
+  }
+
+  .navbar-show {
+    display: block;
+  }
+
+  .navbar {
+    --bs-navbar-padding-y: 0.1rem;
+  }
+
+  .content-product .col-kategori {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .filter-button {
+    display: flex !important;
+    justify-content: space-between;
+  }
+
+  .select-kategori-show {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .sticky-top {
+    z-index: 1;
+  }
+
+  .search .sticky-top {
+    z-index: 1020 !important;
+  }
+  .category-option {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0px;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 999999;
+    padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+    width: 100%;
+    height: 100vh;
+    -webkit-transition: all 0.5s ease;
+    transition: opacity 0.3s ease-out;
+    overflow-x: scroll;
+    overflow-y: auto;
+  }
+
+  .category-option .header-category {
+    border-radius: 5px;
+  }
+
+  .category-option-enter-active,
+  .category-option-leave-active {
+    transition: opacity 0.3s ease-out;
+  }
+
+  .category-option-enter,
+  .category-option-leave-to {
+    opacity: 0;
+  }
+
+  .ribbon {
+    z-index: 0;
+  }
+
+  .category-option .btn-back-category {
+    display: block !important;
+    margin-bottom: 10px;
+  }
+
+  .hero .content .btn {
+    z-index: 0;
+  }
+
+  .card-content .col-md-3 {
+    width: 33%;
+  }
+
+  .footer .contact .col-2 {
+    width: 8%;
+  }
+
+  .content-cek-pesanan .col-md-6,
+  .content-login .col-md-6 {
+    width: 100%;
+  }
+
+  .bg-kurir .col-md-2 {
+    width: 25%;
+  }
+
+  .content-kirim .col-md-8 {
+    width: 60%;
+  }
+
+  .content-kirim .col-md-4 {
+    width: 40%;
+  }
+
+  .cek-out .col-md-8,
+  .cek-out .col-md-4 {
+    width: 100%;
+  }
+
+  .content-kirim .bg-detail-shop {
+    margin-top: 10px;
+  }
+
+  .voucher-item .col-md-4 {
+    width: 40%;
+  }
+
+  .voucher-item .col-md-8 {
+    width: 60%;
+  }
+
+  .voucher-item .line {
+    right: 58% !important;
+  }
+
+  .content-keranjang .total-belanja {
+    z-index: 0;
+  }
+
+  .content-product .col-card-product {
+    width: 100%;
+  }
+
+  .card-content .card .image {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .owl-carousel {
+    z-index: 0;
+  }
+
+  .content-page-details .big {
+    height: 268px;
+    width: 100%;
+  }
+
+  .active > .page-link,
+  .page-link.active {
+    z-index: 0;
+  }
+
+  .bg-voucher .input-group .btn {
+    z-index: 0;
+  }
+
+  .select-kategori {
+    display: none;
+  }
+  .contentSearch .img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contentSearch .img img {
+    width: 250px !important;
+  }
+
+  .headerSearch .formSearch {
+    margin-top: 12rem !important;
+  }
+
+  .searchbar {
+    width: 80% !important;
+  }
+  .not-found .col-md-6 {
+    width: 68%;
+  }
+
+  .imgDefaultSearch .col-md-4 {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row-container,
+  .row-containerr,
+  .row-containers,
+  .row-containerss {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .showsmall {
+    display: block;
+  }
+
+  .hero .content {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    padding: 20px;
+  }
+
+  .hero .content .col-md-5 {
+    justify-content: flex-start;
+  }
+
+  .hero .content h3 {
+    font-size: 28px;
+  }
+
+  .hero .content h5 {
+    font-size: 16px;
+  }
+
+  .kategori_item {
+    width: 25%;
+  }
+
+  .kategori_item_title {
+    font-size: 12px;
+  }
+
+  .card-content .col-md-3,
+  .card-content-all .col-md-4 {
+    width: 30%;
+  }
+
+  .card-content .card .btn {
+    font-size: 12px;
+  }
+
+  .card-content .card .card-title {
+    font-size: 12px;
+  }
+
+  .card-content .card .location {
+    font-size: 12px;
+  }
+
+  .card-content .col-4 .rating {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .card-content .col-8 .rating .d-flex .justify-content-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .card-content .col-4 {
+    width: 30% !important;
+  }
+
+  .card-content .col-8 {
+    width: 70%;
+  }
+
+  .btn-wishliss {
+    margin-bottom: 20px;
+  }
+
+  .ribbon {
+    font-size: 1.2rem;
+  }
+
+  .card-content .card .image {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .card-content .card .card-title {
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-height: 30px;
+    margin-bottom: 2px;
+  }
+
+  .footer {
+    padding-bottom: 80px;
+  }
+
+  .footer .content-footer {
+    padding-bottom: 20px;
+  }
+
+  .btn-block .input-group > .form-control,
+  .btn-block .input-group > .form-floating,
+  .btn-block .input-group > .form-select {
+    position: relative;
+    flex: 1 1 auto;
+    width: 310px;
+    min-width: 0;
+    margin-top: 8px;
+    border-color: var(--color-white);
+  }
+
+  .btn-block
+    .input-group
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+      .valid-feedback
+    ):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 8px;
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+  }
+
+  .kategori-page .col-md-3 {
+    width: 50%;
+  }
+
+  .content-page-details .big {
+    height: 300px;
+  }
+
+  .content-page-details .thumbnail .col-md-3 {
+    width: 25%;
+    margin-bottom: 5px;
+  }
+
+  .content-page-details .title,
+  .content-page-kirim .bg-alamat .header {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .content-page-kirim .bg-alamat .content-alamat {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .content-page-details .rating {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--color-grey);
+  }
+
+  .content-page-details .share .medsos img {
+    width: 34px;
+    height: 34px;
+    margin-right: 3px;
+    margin-top: 5px;
+  }
+
+  .content-page-akun .content-akun .card-content-saldo,
+  .content-page-akun .content-akun .card-profil,
+  .content-page-akun .content-akun h5.title,
+  .content-page-akun .content-akun .card-content-profil,
+  .content-page-akun .content-akun .card-content-alamat,
+  .content-page-akun .content-akun .card-content-rek,
+  .content-wishlist .title,
+  .content-pesanan .title,
+  .content-page-kirim .content-kirim .title,
+  .content-page-kirim .content-kurir .title,
+  .content-kirim .bg-alamat,
+  .content-kirim .bg-informasi,
+  .content-kirim .bg-detail-shop,
+  .content-kirim .bg-voucher,
+  .content-kirim .bg-detail-pesanan,
+  .content-kirim .bg-alamat-kirim,
+  .content-kirim .bg-method,
+  .content-kurir .bg-kurir,
+  .content-cek-pesanan .header-cek-pesanan,
+  .kategori-page h5.title,
+  .details-page .judul-detail,
+  .product-page .judul-page,
+  .content-invoice-topup .header-invoice-topup,
+  .content-keranjang .title-cart {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .content-page-akun .content-akun .card-list-menu-akun {
+    background-color: var(--color-white);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .content-page-akun .content-akun .card-menu-akun {
+    display: none;
+  }
+
+  .content-alamat .title .name {
+    margin-right: 20%;
+  }
+
+  .content-alamat .content-btn-alamat {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+  }
+
+  .content-akun .card-content-saldo .header-saldo .title-header,
+  .content-akun .card-content-alamat .header-alamat,
+  .content-akun .card-content-rek .header-rek {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .dropship .form-dropship .form-control {
+    margin-top: 5px;
+  }
+
+  .bg-alamat-kirim .content {
+    margin-bottom: 0px;
+  }
+
+  .content-method1 .btn,
+  .content-method3 .btn,
+  .content-method4 .btn,
+  .content-method2 .btn {
+    font-size: 12px;
+  }
+
+  .content-method1 .note-method1 ul {
+    font-size: 13px;
+  }
+
+  .content-pesanan .content-list-menu-pesanan {
+    display: block;
+  }
+
+  .content-pesanan .content-btn-pesanan {
+    display: none;
+  }
+
+  .content-nilai-details .content .card-testi .header-testi {
+    font-size: 12px;
+  }
+
+  .content-produk-pesanan img {
+    width: 100%;
+  }
+
+  .content-produk-pesanan .produk p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .content-header-pesanan .title-pesanan {
+    font-size: 12px;
+  }
+
+  .content-header-pesanan .angka {
+    font-size: 14px;
+  }
+
+  .btn-more-pesanan .btn {
+    margin-bottom: 5px;
+  }
+
+  .kemas .price,
+  .kemas .price-qty {
+    font-size: 14px;
+  }
+
+  .content-kategori-page .content-kategori,
+  .list-content-pesanan .header-detail-pesanan,
+  .content-keranjang .content-page-keranjang {
+    margin-top: 15px;
+  }
+
+  .header-detail-pesanan .title-header {
+    font-size: 16px;
+    margin-left: 5px;
+    font-weight: 700;
+  }
+
+  .list-content-pesanan .top {
+    display: flex;
+    font-size: 14px;
+  }
+
+  .list-content-pesanan .top a {
+    color: var(--color-yellow);
+    margin-left: 5px;
+    font-size: 16px;
+  }
+
+  .list-content-pesanan .top .fa-2x {
+    font-size: 1.5em;
+  }
+
+  .list-content-pesanan .bottom {
+    display: none;
+  }
+
+  .content-details-pesanan .header-text {
+    font-size: 16px !important;
+  }
+
+  .content-details-pesanan .text p {
+    font-size: 14px;
+  }
+
+  .btn-block .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .kategori .title,
+  .content-kilat .header,
+  .content-best .header span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .kategori .lihat-semua,
+  .content-best .header a {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .footer .information p {
+    margin-bottom: 8px;
+  }
+
+  .footer .information.mt-3 {
+    margin-top: 10px !important;
+  }
+
+  .footer .contact table > :not(caption) > * > * {
+    padding: 15px 0px 0px 0px;
+  }
+
+  .card-content .card .card-body {
+    padding: 10px;
+  }
+
+  .hero .content .btn {
+    padding: 8px;
+  }
+
+  .content-cek-pesanan .card-cek-pesanan,
+  .details-page .content-page-details {
+    margin-top: 15px;
+  }
+
+  .card-cek-pesanan .form-control,
+  .kategori-page .content-kategori .title {
+    font-size: 14px;
+  }
+
+  .kategori_item_img img {
+    width: 50px;
+  }
+
+  .bg-kurir .col-md-2 {
+    width: 50%;
+  }
+
+  .ongkir .warning {
+    text-align: end;
+  }
+
+  .content-more-product .title-more {
+    font-size: 18px;
+  }
+
+  .card-content .card .harga .rating {
+    font-size: 12px;
+  }
+
+  .content-login .card-login .desc-login {
+    font-size: 14px;
+  }
+
+  .bg-alamat .dropship .form-dropship .form-control {
+    font-size: 14px !important;
+  }
+
+  .fullsize-image img {
+    max-width: 70% !important;
+    max-height: 70% !important;
+  }
+
+  .bg-cek-alamat .form-check .alamat {
+    font-size: 14px;
+  }
+
+  .bg-cek-alamat .form-check .badge {
+    font-size: 10px;
+  }
+
+  .bg-cek-alamat {
+    display: block !important;
+  }
+
+  .content-data-alamat .bg-cek-alamat .edit-alamat {
+    font-size: 14px;
+    margin-right: 0px;
+    margin-top: 10px;
+    text-align: end;
+    margin-right: 8px;
+  }
+
+  .float {
+    left: 20px !important;
+    bottom: 80px !important;
+  }
+
+  .card-content-profil {
+    font-size: 14px !important;
+  }
+
+  .card-radio label {
+    font-size: 16px !important;
+  }
+
+  .title-alamat .col-md-3,
+  .title-alamat .col-md-6 {
+    width: 50%;
+  }
+
+  .invoices {
+    display: none;
+  }
+
+  .invoicess {
+    display: block !important;
+  }
+
+  .title-alamat .col-8 {
+    width: 64%;
+  }
+
+  .searchbar {
+    width: 100% !important;
+    margin-top: 0.5rem !important;
+  }
+  .formSearch .titleSearch {
+    font-size: 28px !important;
+  }
+  .imgDefaultSearch .col-md-4 {
+    width: 60%;
+  }
+}
+
+.invoicess {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .card-content .card .image {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .searchbar-right {
+    display: none !important;
+  }
+  .btn-show-small {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .searchbar {
+    min-height: calc(1.5em + 1rem + 10px) !important;
+  }
+
+  .imgDefaultSearch {
+    margin-top: 3rem !important;
+  }
+}
+@media screen and (max-width: 479px) {
+  .not-found .col-md-6 {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 432px) {
+  .footerCard {
+    display: flex !important;
+  }
+
+  .footerCard .btnMitra {
+    margin-top: 0px !important;
+  }
+  .imgDefaultSearch .col-md-4 {
+    width: 100%;
+  }
+
+  .titleNameMitra {
+    font-size: 1.3rem !important;
+  }
+
+  .formSearch .titleSearch {
+    font-size: 24px !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .kategori_item_title {
+    font-size: 12px;
+  }
+
+  .headerMitra .titleHeader {
+    font-size: 1.1rem !important;
+  }
+}
+
+.cart-link {
+  cursor: pointer;
+}
+
+.total-harga-produk {
+  font-size: 18px !important;
+  font-weight: 700;
+  color: var(--color-main);
+}
+
+.content-error {
+  box-shadow: 0 1px 6px 0 rgba(49, 53, 59, 0.12);
+  border-radius: 8px;
+  padding: 20px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-error {
+  display: inline-block;
+  vertical-align: middle;
+  width: 160px;
+  margin: 0 32px 0 56px;
+}
+
+.img-error img {
+  width: 100%;
+}
+
+.desk-error {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.title-error {
+  font-weight: 800;
+  font-size: 24px;
+  color: #52565e;
+  line-height: 1;
+}
+
+.desc-error {
+  display: block;
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 1;
+}
+
+.form-group .ubah_email {
+  font-size: 12px;
+  color: var(--color-main);
+}
+
+.btn-modal-alamat .link-admin {
+  color: var(--color-main);
+}
+
+.input-with-counter {
+  position: relative;
+}
+
+.input-with-counter input {
+  width: 100%;
+  padding-right: 80px;
+}
+
+.character-counter {
+  position: absolute;
+  right: 12px;
+  bottom: 9px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.card-content .card-body {
+  padding-top: 5px;
+}
+
+.fc-search {
+  border: 1px solid var(--color-main) !important;
+}
+
+.fc-group {
+  border: 1px solid var(--color-main) !important;
+  background-color: var(--color-main);
+  color: var(--color-white);
+}
+
+.btn-modal-edit {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.gram {
+  font-size: 12px !important;
+  color: var(--color-secondary);
+}
+
+.header-order {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-pesan-text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.batalkan {
+  cursor: pointer;
+}
+
+.title-alamat p {
+  margin-bottom: 0px !important;
+}
+
+.text-primary {
+  color: #ffc107 !important;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ss .card-body {
+  padding-bottom: 0.5rem !important;
+}
+
+/* new page */
+
+.headerSearch {
+  background-color: var(--bg-color);
+  position: relative;
+  padding: 2.7rem 0px;
+  z-index: 0;
+}
+
+.headerSearch .img img {
+  position: absolute;
+  width: 365px;
+  top: 0;
+  z-index: 0;
+}
+
+.headerSearch .formSearch {
+  margin-top: 5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.formSearch .div {
+  display: flex;
+  justify-content: center;
+}
+
+.formSearch .form-control-lg {
+  width: 55%;
+  z-index: 3;
+  min-height: calc(1.5em + 1rem + 15px);
+  box-shadow: 0px 1px 15px rgba(0, 151.94, 91.16, 0.56);
+  border: none;
+  border-radius: 10px;
+  margin-top: 0.7rem;
+}
+
+.formSearch .titleSearch {
+  font-size: 32px;
+  font-weight: 800;
+  z-index: 3;
+  position: relative;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.searchbar {
+  margin-top: 0.9rem;
+  font-size: 14px;
+  color: #202124;
+  display: flex;
+  z-index: 3;
+  min-height: calc(1.5em + 1.5rem + 15px);
+  background: white;
+  border: none;
+  box-shadow: 0px 1px 15px rgba(0, 151.94, 91.16, 0.56);
+  border-radius: 100px;
+  width: 55%;
+}
+
+.searchbar-wrapper {
+  flex: 1;
+  display: flex;
+  padding: 5px 8px 0 14px;
+}
+
+.searchbar-left {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
+  display: flex;
+  align-items: center;
+  padding-right: 13px;
+  margin-top: -5px;
+}
+
+.search-icon {
+  color: #9aa0a6;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.searchbar-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.searchbar-center {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.searchbar-input-spacer {
+  color: transparent;
+  flex: 100%;
+  white-space: pre;
+  height: 34px;
+  font-size: 16px;
+}
+.searchbar-input {
+  caret-color: var(--color-main); /* Ubah warna kursor teks sesuai keinginan */
+}
+.searchbar-input {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.87);
+  word-wrap: break-word;
+  outline: none;
+  display: flex;
+  flex: 100%;
+  margin-top: -37px;
+  height: 34px;
+  font-size: 16px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.searchbar-right {
+  display: flex;
+  flex: 0 0 auto;
+  margin-top: -5px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.searchbar-clear-icon {
+  margin-right: 12px;
+}
+
+.btn-search {
+  height: fit-content;
+  border-radius: 100px;
+  padding: 0.5rem 2rem;
+  font-weight: 700;
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+  margin-right: 3px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn-search:hover {
+  background-color: var(--color-main-hover);
+  border-color: var(--color-main-hover);
+  transition: all 0.5s;
+}
+
+.btn-show-small {
+  display: none;
+}
+
+.btn-show-small .btn {
+  padding: 0.65rem 3.5rem;
+  margin-top: 1rem;
+}
+
+.mitraSection {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.headerMitra .titleHeader {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.carousel {
+  margin-top: 1.2rem;
+}
+
+.carousel .card {
+  border: 1px solid #ececec;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.titleNameMitra {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card-mitra .nameMitra {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-mitra .addressMitra {
+  font-size: 0.9rem;
+  line-height: 120%;
+}
+
+.card-mitra .footerCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.numberMitra {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-main);
+  font-weight: 500;
+  background-color: var(--color-white);
+  border-color: var(--color-main);
+  border-radius: 100px;
+  padding: 0.3rem 1rem;
+  width: 100%;
+  height: 2.22rem;
+}
+
+.numberMitra:hover::before {
+  transform: scaleX(1);
+}
+.numberContent {
+  position: relative;
+  z-index: 1;
+}
+.numberMitra:hover {
+  color: var(--color-white);
+  text-shadow: 0px 1px 1px #00000080;
+}
+.numberMitra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    321deg,
+    var(--color-main) 0%,
+    var(--color-white) 100%
+  );
+  transition: all 0.475s;
+}
+.footerCard .btnMitra {
+  background-color: #e9eef5;
+  border-radius: 100px;
+  padding: 0.3rem 0.65rem;
+}
+
+.footerCard .btnMitra:hover {
+  background-color: var(--color-main);
+  transition: all 0.5s;
+  color: var(--color-white);
+}
+
+.resultSearch {
+  position: relative;
+  z-index: 0;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.resultSearch .contentTable {
+  margin-top: 1rem;
+  background-color: var(--color-white);
+  padding: 1rem 1rem 0.2rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contentTable .table > thead {
+  background: var(--bg-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contentTable .table tr {
+  text-align: start;
+}
+
+.contentTable .table > :not(caption) > * > * {
+  padding: 0.5rem 1.2rem;
+}
+
+.contentResult .titleSearch {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.titleSearch span {
+  color: var(--color-main);
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.btnClear .btn {
+  margin-top: 1rem;
+  background-color: var(--color-white);
+  border-color: var(--color-main);
+  color: var(--color-main);
+  font-size: 0.8rem;
+  border-radius: 50px;
+  padding: 0.35rem 1.5rem;
+}
+
+.not-found img {
+  width: 200px;
+}
+
+.not-found .titleNotfound {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.not-found .descNotFound {
+  font-size: 0.9rem;
+  color: #9ca0aa;
+}
+
+.subMitra {
+  margin-top: 3.5rem !important;
+}
+
+.owl-stage {
+  display: flex;
+}
+
+.carousel .item {
+  width: 100%;
+}
+
+.owl-item {
+  display: flex;
+}
+.owl-dots {
+  display: block !important;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--color-main);
+}
+
+.contentTable .pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 1rem 0;
+}
+
+.pagination span {
+  color: var(--color-secondary);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination .btn {
+  background-color: var(--color-main);
+  color: var(--color-white);
+}
+
+.pagination .btn.prevPage {
+  background-color: unset;
+  color: var(--color-main);
+  border-color: var(--color-main);
+  margin-right: 8px;
+}
+
+.pagination .form-control-sm {
+  width: 50px;
+  min-height: calc(1em + 0.2rem + 0px);
+  border-radius: 0.5rem;
+}
+
+.MitraDetail .searchbar {
+  box-shadow: 0px 1px 15px rgba(238, 100, 67, 0.56);
+}
+.MitraDetail {
+  --color-main: #ee6443;
+  --bg-color: #fef3ee;
+  --color-main-hover: #db2c1b;
+}
+
+.imgDefaultSearch {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+.imgDefaultSearch .content-text {
+  color: #f49b7d;
+  line-height: 110%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='M4.96369 15.7932L0.510689 1.30081C0.390595 0.909966 0.764884 0.548052 1.15147 0.681218L15.8895 5.75791C16.3619 5.92063 16.3298 6.59921 15.8442 6.71664L8.94217 8.3857C8.78126 8.42461 8.65004 8.54064 8.59173 8.69558L5.90959 15.8224C5.74164 16.2687 5.10374 16.249 4.96369 15.7932Z' fill='black'/%3E%3C/svg%3E"),
+      auto;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="search"] {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-cursor-text'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M10 12h4' /%3E%3Cpath d='M9 4a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3' /%3E%3Cpath d='M15 4a3 3 0 0 0 -3 3v10a3 3 0 0 0 3 3' /%3E%3C/svg%3E"),
+      auto;
+  }
+}
